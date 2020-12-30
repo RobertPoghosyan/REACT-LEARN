@@ -1,0 +1,22 @@
+
+h1{
+    text-align: center;
+    color: #61dafb
+}
+
+table,td,th{
+    border: 1px solid black;
+   
+}
+
+table{
+    
+    width: 100%;
+}
+
+td,th{
+    width: 20%;
+    text-align: center;
+    height: 200px;
+    
+}
