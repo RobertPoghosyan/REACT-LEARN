@@ -1,8 +1,8 @@
 import React from 'react';
 import './Button.css';
 
-function Button () {
-    return <button type = "button" className = "btn"> BUY </button>
+const Button =  (props) => {
+    return <button type = "submit" className = "btn" onClick = {props.onClick}> Sign In with Email </button>
 }
 
 export default Button;
