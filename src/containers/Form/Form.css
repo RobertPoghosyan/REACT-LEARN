@@ -18,3 +18,11 @@ img {
     display: inline-flex;
    
 }
+
+.error-text{
+    width: 65%;
+    margin: 4px auto 0;
+    text-align: left;
+    font-size: 18px;
+    color: red;
+}

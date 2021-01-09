@@ -1,6 +1,5 @@
+import React from 'react';
 import './App.css';
-//import ListItem from './components/ListItem/ListItem';
-//import Input from './components/Input/Input';
 import Form from './containers/Form/Form';
 
 
@@ -8,9 +7,8 @@ import Form from './containers/Form/Form';
 function App() {
   return (
     <div className="App">
-      <Form />
       
-       
+      <Form />
       
     </div>
   );

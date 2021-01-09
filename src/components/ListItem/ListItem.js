@@ -2,7 +2,7 @@ import React from 'react';
 import './ListItem.css';
 import Button from '../Button/Button';
 import jack from '../../assets/jack.jpg';
-import beefeater1 from '../../assets/beefeater1.jpg';
+import beefeater1 from '../../assets/beefeater.jpg';
 
 
 function ListItem () {
@@ -44,6 +44,3 @@ function ListItem () {
 
 
 export default ListItem;
-//<li> Butter <span> / Food / <button> Buy </button></span></li>
-//<li> Whiskey <span> / Beverage / <button> Buy </button></span></li>
-//<li> Apple <span> / Fruits / <button> Buy </button></span></li>

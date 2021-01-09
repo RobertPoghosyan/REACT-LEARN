@@ -2,17 +2,54 @@ import React,{useState} from 'react';
 import Input from '../../components/Input/Input' ;
 import Button from '../../components/Button/Button' ;
 import   './Form.css';
-import {validate} from '../../util/validate';
+import {validatePassword} from '../../util/validate';
+import {validateMail} from '../../util/validate';
 
 const Form = () => {
 
-    //const [email, setEmail] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState('');
-      const onChange = (event) =>{
-          const newVal = event.target.value;
-          console.log(validate (newVal)) ;
-          setPassword(newVal);
-      }  
+    const [errorTextMail,setErrorMail] = useState('');
+    const [errorTextPassword,setErrorPassword] = useState('');
+
+    const onChangeEmail = (event) =>{
+        setEmail (event.target.value); 
+    } 
+
+    const onChangePassword = (event) =>{
+        setPassword(event.target.value);
+        //console.log(validatePassword (event.target.value)) ;   
+    }  
+
+    const loginButton = () =>{
+        let userData = {
+            Post:email,
+            Pass:password
+        }
+
+        if(validateMail(userData).isValidMail === false){
+            setErrorMail(validateMail(userData).errorMail)
+        }
+        if(validateMail(userData).isValidMail){
+            setErrorMail("")
+        }
+        if(validatePassword(userData).isValidPassword === false){
+            setErrorPassword(validatePassword(userData).errorPassword)
+        }
+        if(validatePassword(userData).isValidPassword ){
+            setErrorPassword("")
+        }
+        if(validateMail(userData).isValidMail && validatePassword(userData).isValidPassword){
+            alert(
+                "WELCOME" + "\n" + "Your mail is " + email + "\n" + "Your pass is " + password
+            )
+        }
+
+    }
+
+
+
+
     return (
         <div className = "form">
            
@@ -20,9 +57,11 @@ const Form = () => {
             
             <h1>Sign in to Slack</h1>
             <p>Continue with the Google account or email address you use to sign in</p>
-            <Input className="log" placeholder = "email" />
-            <Input value = {password} onChange = {onChange} className = "pass" placeholder = "password"/>
-            <Button />
+            <Input type = "email" value = {email} onChange = {onChangeEmail} className="log" placeholder = "email" />
+            <p className = "error-text">{errorTextMail}</p>
+            <Input type = "password" value = {password} onChange = {onChangePassword} className = "pass" placeholder = "password"/>
+            <p className = "error-text">{errorTextPassword}</p>
+            <Button onClick = {loginButton}> Sign In with Email </Button>
         </div>
     )
 }

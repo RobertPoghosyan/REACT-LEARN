@@ -3,15 +3,17 @@ import './Input.css';
 
 
 const Input = (props) => {
-    const {type, value, onChange, placeholder} = props;
+    const {type,value,onChange, placeholder} = props;
     return (
         
-        <input className = "pass"
+        <input  
+            className = "pass"
             type={type} 
             value={value}
             onChange={onChange}
-            placeholder={placeholder}/>
-        )
-}
+            placeholder={placeholder}
+        />
+    )    
+}   
 
 export default Input;
