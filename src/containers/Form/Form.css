@@ -1,8 +1,10 @@
 .form{
-    margin-left: 500px;
+    margin: auto;
     height: 500px;
     width: 700px;
     text-align: center; 
+    align-items: center;
+    justify-content: center;
 }
 
 img {
