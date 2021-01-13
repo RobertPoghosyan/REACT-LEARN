@@ -1,9 +1,11 @@
 import React,{useState} from 'react';
+
 import Input from '../../components/Input/Input' ;
 import Button from '../../components/Button/Button' ;
-import   './Form.css';
 import {validatePassword} from '../../util/validate';
 import {validateMail} from '../../util/validate';
+
+import   './Form.css';
 
 const Form = () => {
 
@@ -41,7 +43,7 @@ const Form = () => {
         }
         if(validateMail(userData).isValidMail && validatePassword(userData).isValidPassword){
             alert(
-                "WELCOME" + "\n" + "Your mail is " + email + "\n" + "Your pass is " + password
+                "WELCOME" + "\nYour mail is " + email + "\nYour pass is " + password
             )
         }
 

@@ -1,12 +1,12 @@
 import React from 'react';
-import './ListItem.css';
+
 import Button from '../Button/Button';
 import jack from '../../assets/jack.jpg';
 import beefeater1 from '../../assets/beefeater.jpg';
 
+import './ListItem.css';
 
 function ListItem () {
-
    return <div>
       <h1>BEVERAGE</h1>
       <table >
@@ -30,12 +30,8 @@ function ListItem () {
             <td><img src={beefeater1} alt="Beefeater"></img></td>
             <td>23$</td>
             <td><Button /> </td>
-         </tr>
-         
-
+         </tr> 
       </table>
-      
-
    </div>
              
            
