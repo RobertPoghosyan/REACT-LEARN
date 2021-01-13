@@ -5,6 +5,7 @@ import Layout from './components/Layout/Layout'
 import Header from './containers/Header/Header'
 import Footer from './containers/Footer/Footer'
 import Auth from './containers/Auth/Auth';
+import Products from './containers/Products/Products';
 
 import './App.css';
 
@@ -13,7 +14,8 @@ function App() {
     <div className="App">
       <Header />
       <Layout>
-       <Auth />
+        <Auth />
+        <Products />
         <Footer />
       </Layout>
     </div>
