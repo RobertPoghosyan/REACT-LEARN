@@ -9,8 +9,7 @@ export const validateMail = (val)=>{
     } else {
         return {
             isValidMail:true
-        }
-        
+        }   
     }
 }
 

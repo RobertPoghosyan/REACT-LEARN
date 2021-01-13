@@ -1,11 +1,10 @@
 import React from 'react';
-import './Input.css';
 
+import './Input.css';
 
 const Input = (props) => {
     const {type,value,onChange, placeholder} = props;
     return (
-        
         <input  
             className = "pass"
             type={type} 
